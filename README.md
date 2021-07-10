@@ -1,6 +1,6 @@
 # baumeister
 
-A stystem for buiding UI components
+A system for building UI components
 
 ## Installation
 
