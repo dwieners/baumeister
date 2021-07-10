@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/dwieners//baumeister",
+  "repository": "https://github.com/dwieners/baumeister",
   "author": "Dominik Wieners <dw@app-pilots.de> (https://github.com/dwieners/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dwieners//baumeister/issues"
+    "url": "https://github.com/dwieners/baumeister/issues"
   },
-  "homepage": "https://github.com/dwieners//baumeister#readme",
+  "homepage": "https://github.com/dwieners/baumeister#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
