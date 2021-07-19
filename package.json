@@ -1,5 +1,5 @@
 {
-  "name": "baumeister",
+  "name": "@apppilots/baumeister",
   "version": "0.1.0",
   "description": "A stystem for buiding UI components",
   "main": "lib/commonjs/index",
@@ -36,13 +36,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/dwieners//baumeister",
+  "repository": "https://github.com/dwieners/baumeister",
   "author": "Dominik Wieners <dw@app-pilots.de> (https://github.com/dwieners/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dwieners//baumeister/issues"
+    "url": "https://github.com/dwieners/baumeister/issues"
   },
-  "homepage": "https://github.com/dwieners//baumeister#readme",
+  "homepage": "https://github.com/dwieners/baumeister#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -52,7 +52,7 @@
     "@release-it/conventional-changelog": "^2.0.0",
     "@types/jest": "^26.0.0",
     "@types/react": "^16.9.19",
-    "@types/react-native": "0.62.13",
+    "@types/react-native": "^0.64.12",
     "commitlint": "^11.0.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^7.0.0",

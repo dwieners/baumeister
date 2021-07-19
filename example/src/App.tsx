@@ -1,31 +1,20 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import Baumeister from 'baumeister';
+import { SafeAreaView, Text } from 'react-native';
+import { Box } from 'baumeister';
 
-export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    Baumeister.multiply(3, 7).then(setResult);
-  }, []);
-
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView>
+      <Box
+        paddingHorizontal={'m'}
+        paddingVertical={'m'}
+        backgroundColor={'red'}
+      >
+        <Text>Hello Baumeister!</Text>
+      </Box>
+    </SafeAreaView>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
-  },
-});
+export default App;

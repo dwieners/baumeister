@@ -3,19 +3,35 @@
 A stystem for buiding UI components
 
 ## Installation
-
-```sh
-npm install baumeister
+### Yarn
+```bash
+$ yarn add @apppilots/baumeister
+```
+### NPM
+```bash
+$ npm install @apppilots/baumeister
 ```
 
 ## Usage
 
-```js
-import Baumeister from "baumeister";
+```tsx
+import { Box } from '@apppilots/baumeister';
 
-// ...
 
-const result = await Baumeister.multiply(3, 7);
+const Welcome = () => {
+  return (
+      <Box
+        paddingHorizontal={'m'}
+        paddingVertical={'m'}
+        backgroundColor={'red'}
+      >
+        <Text>Hello Baumeister!</Text>
+      </Box>
+  );
+};
+
+export default Welcome;
+
 ```
 
 ## Contributing
