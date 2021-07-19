@@ -15,7 +15,7 @@ $ npm install @apppilots/baumeister
 ## Usage
 
 ```tsx
-import { Box } from 'baumeister';
+import {Box} from '@apppilots/baumeister';
 
 
 const Welcome = () => {
