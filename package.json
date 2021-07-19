@@ -1,7 +1,7 @@
 {
-  "name": "baumeister",
+  "name": "@apppilots/baumeister",
   "version": "0.1.0",
-  "description": "A stystem for buiding UI components",
+  "description": "A system for building UI components",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",
@@ -37,7 +37,7 @@
     "android"
   ],
   "repository": "https://github.com/dwieners/baumeister",
-  "author": "Dominik Wieners <dw@app-pilots.de> (https://github.com/dwieners/)",
+  "author": "Dominik Wieners",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dwieners/baumeister/issues"
