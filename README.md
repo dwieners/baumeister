@@ -5,11 +5,11 @@ A system for building UI components
 ## Installation
 ### Yarn
 ```bash
-$ yarn add baumeister
+$ yarn add @apppilots/baumeister
 ```
 ### NPM
 ```bash
-$ npm install baumeister
+$ npm install @apppilots/baumeister
 ```
 
 ## Usage
