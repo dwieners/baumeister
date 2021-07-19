@@ -1,5 +1,5 @@
 {
-  "name": "@apppilots/baumeister",
+  "name": "baumeister",
   "version": "0.1.0",
   "description": "A stystem for buiding UI components",
   "main": "lib/commonjs/index",
