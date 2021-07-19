@@ -5,17 +5,17 @@ A system for building UI components
 ## Installation
 ### Yarn
 ```bash
-$ yarn add @apppilots/baumeister
+$ yarn add baumeister
 ```
 ### NPM
 ```bash
-$ npm install @apppilots/baumeister
+$ npm install baumeister
 ```
 
 ## Usage
 
 ```tsx
-import { Box } from '@apppilots/baumeister';
+import { Box } from 'baumeister';
 
 
 const Welcome = () => {
