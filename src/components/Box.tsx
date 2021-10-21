@@ -6,22 +6,17 @@ import {
   View,
   ViewProps,
 } from 'react-native';
-import type { ContainerProps, SpacingProps, SpacingType } from '../types';
+import type { ContainerProps, SpacingProps } from '../types';
+import { BaseSpacing } from '../types';
 
+/**
+ * BoxProps
+ */
 type BoxProps = ViewProps &
   SpacingProps &
-  ContainerProps & { platform?: PlatformOSType };
-
-const spacing: SpacingType = {
-  s: 8,
-  m: 16,
-  l: 24,
-  xl: 32,
-  xxl: 40,
-};
+  ContainerProps & { platform?: [PlatformOSType] };
 
 const Box: FC<BoxProps> = ({
-  children,
   padding,
   paddingBottom,
   paddingStart,
@@ -31,34 +26,40 @@ const Box: FC<BoxProps> = ({
   paddingEnd,
   paddingTop,
   paddingVertical,
-  backgroundColor,
   container,
+  backgroundColor,
   platform,
+  children,
   style,
 }) => {
   const styles = StyleSheet.create({
     container: {
-      padding: padding && spacing[padding],
-      paddingBottom: paddingBottom && spacing[paddingBottom],
-      paddingStart: paddingStart && spacing[paddingStart],
-      paddingRight: paddingRight && spacing[paddingRight],
-      paddingLeft: paddingLeft && spacing[paddingLeft],
-      paddingHorizontal: paddingHorizontal && spacing[paddingHorizontal],
-      paddingEnd: paddingEnd && spacing[paddingEnd],
-      paddingTop: paddingTop && spacing[paddingTop],
-      paddingVertical: paddingVertical && spacing[paddingVertical],
+      padding: padding && BaseSpacing[padding],
+      paddingBottom: paddingBottom && BaseSpacing[paddingBottom],
+      paddingStart: paddingStart && BaseSpacing[paddingStart],
+      paddingRight: paddingRight && BaseSpacing[paddingRight],
+      paddingLeft: paddingLeft && BaseSpacing[paddingLeft],
+      paddingHorizontal: paddingHorizontal && BaseSpacing[paddingHorizontal],
+      paddingEnd: paddingEnd && BaseSpacing[paddingEnd],
+      paddingTop: paddingTop && BaseSpacing[paddingTop],
+      paddingVertical: paddingVertical && BaseSpacing[paddingVertical],
       flex: container ? 1 : undefined,
       backgroundColor,
     },
   });
 
-  if (platform !== undefined) {
-    return Platform.OS === platform ? (
+  /**
+   * Check if selected platform ist can be shown
+   */
+  const currentPlatform = platform?.some((v) => Platform.OS === v);
+
+  if (currentPlatform !== undefined) {
+    return currentPlatform ? (
       <View style={[styles.container, style]}>{children}</View>
     ) : null;
+  } else {
+    return <View style={[styles.container, style]}>{children}</View>;
   }
-
-  return <View style={[styles.container, style]}>{children}</View>;
 };
 
 export default Box;

@@ -1,6 +1,6 @@
 {
   "name": "@apppilots/baumeister",
-  "version": "0.1.2",
+  "version": "0.1.7",
   "description": "A system for building UI components",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -128,7 +128,8 @@
   },
   "eslintIgnore": [
     "node_modules/",
-    "lib/"
+    "lib/",
+    "src/components/__tests__/*"
   ],
   "prettier": {
     "quoteProps": "consistent",
@@ -150,5 +151,8 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
